@@ -5,12 +5,13 @@ def makeInverseIndex(strlist):
 		wordlist = str.split()
 		for word in wordlist:
 			if word in inverseindex:
-				inverseindex[word].append(idx)
+				if idx not in inverseindex[word]:
+					inverseindex[word].append(idx)
 			else:
 				inverseindex[word] = [idx]
 	return inverseindex
 
-
-mystrlist = ['the quick brown fox jumps over the lazy dog', 'that maps each word to the set consisting of the document numbers']
+f = open('stories_small.txt')
+mystrlist = list(f)
 myinverseIndex = makeInverseIndex(mystrlist)
 print(myinverseIndex)
