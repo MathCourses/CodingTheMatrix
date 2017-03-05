@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40730bcd-2f6e-4d97-ba55-aea71a07628e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search_engine.py" afterPath="$PROJECT_DIR$/search_engine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vecutil.py" afterPath="$PROJECT_DIR$/vecutil.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vec.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2970">
-              <caret line="135" column="9" lean-forward="false" selection-start-line="135" selection-start-column="9" selection-end-line="137" selection-end-column="19" />
+            <state relative-caret-position="352">
+              <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vecutil.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vecutil.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vecutil.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="660">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -74,9 +73,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/search_engine.py" />
-        <option value="$PROJECT_DIR$/vecutil.py" />
         <option value="$USER_HOME$/Downloads/vec.py" />
         <option value="$PROJECT_DIR$/vec.py" />
+        <option value="$PROJECT_DIR$/vecutil.py" />
       </list>
     </option>
   </component>
@@ -429,18 +428,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vecutil.py">
+    <entry file="file://$PROJECT_DIR$/vec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vec.py">
+    <entry file="file://$PROJECT_DIR$/vecutil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="135" column="9" lean-forward="false" selection-start-line="135" selection-start-column="9" selection-end-line="137" selection-end-column="19" />
+        <state relative-caret-position="660">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
       </provider>
