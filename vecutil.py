@@ -18,7 +18,7 @@ def triangular_solve(rowlist, b):
         x[i] = (b[i] - rowlist[i] * x)/rowlist[i][i]
     return x
 
-def triangular_solve(rowlist,label_list, b):
+def triangular_solve2(rowlist,label_list, b):
     """
     Solve Ax = b for vector x and rowlist = A
     For arbitrary domains, need to specify an order for which the system is "triangular"
@@ -31,12 +31,12 @@ def triangular_solve(rowlist,label_list, b):
         c = label_list[r]
         x[c] = (b[r] - rowlist[r] * x)/rowlist[r][c]
     return x
-
-list = ['A', 'B', 'C', 'D']
-v = list2vec(list)
-print(v)
-
-# v = Vec({'A','B','C'}, {'A':1})
-# for d in v.D:
-#     if d in v.f:
-#         print(v.f[d])
+#
+# list = ['A', 'B', 'C', 'D']
+# v = list2vec(list)
+# print(v)
+#
+# # v = Vec({'A','B','C'}, {'A':1})
+# # for d in v.D:
+# #     if d in v.f:
+# #         print(v.f[d])
