@@ -3,17 +3,7 @@ from vec import Vec
 
 #Test your Mat class over R and also over GF(2).  The following tests use only R.
 
-def getitem(M, k):
-    """
-    Returns the value of entry k in M, where k is a 2-tuple
-    >>> M = Mat(({1,3,5}, {'a'}), {(1,'a'):4, (5,'a'): 2})
-    >>> M[1,'a']
-    4
-    >>> M[3,'a']
-    0
-    """
-    assert k[0] in M.D[0] and k[1] in M.D[1]
-    pass
+
 
 def equal(A, B):
     """

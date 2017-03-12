@@ -1,4 +1,31 @@
+def getitem(M, k):
+    """
+    Returns the value of entry k in M, where k is a 2-tuple
+    >>> M = Mat(({1,3,5}, {'a'}), {(1,'a'):4, (5,'a'): 2})
+    >>> M[1,'a']
+    4
+    >>> M[3,'a']
+    0
+    """
+    assert k[0] in M.D[0] and k[1] in M.D[1]
+    return M.f[k] if k in M.f else 0
+
+def transpose(M):
+    """
+    Returns the matrix that is the transpose of M.
+
+    >>> M = Mat(({0,1}, {0,1}), {(0,1):3, (1,0):2, (1,1):4})
+    >>> M.transpose() == Mat(({0,1}, {0,1}), {(0,1):2, (1,0):3, (1,1):4})
+    True
+    >>> M = Mat(({'x','y','z'}, {2,4}), {('x',4):3, ('x',2):2, ('y',4):4, ('z',4):5})
+    >>> Mt = Mat(({2,4}, {'x','y','z'}), {(4,'x'):3, (2,'x'):2, (4,'y'):4, (4,'z'):5})
+    >>> M.transpose() == Mt
+    True
+    """
+    return Mat((M.D[1], M.D[0]), {(c,r):M[r,c] for (r,c) in M.f})
+
 class Mat:
+
     def __init__(self, labels, function):
         assert isinstance(labels, tuple)
         assert isinstance(labels[0], set) and isinstance(labels[1], set)
@@ -6,20 +33,12 @@ class Mat:
         self.D = labels
         self.f = function
 
+    __getitem__ = getitem
+    transpose = transpose
+
     def __repr__(self):
         "evaluatable representation"
-        return "Mat("+set(self.D) + ", " + str(self.f) + ")"
+        return "Mat("+ str(self.D) + ", " + str(self.f) + ")"
 
-    def __str__(M, rows=None, cols=None):
-        "string representation for print()"
-        if rows == None: rows = sorted(M.D[0], key=repr)
-        if cols == None: cols = sorted(M.D[1], key=repr)
-        separator = ' | '
-        numdec = 3
-        pre = 1+max([len(str(r)) for r in rows])
-        colw = {col:(1+max([len(str(col))] + [len('{0:.{1}G}'.format(M[row,col],numdec)) if isinstance(M[row,col], int) or isinstance(M[row,col], float) else len(str(M[row,col])) for row in rows])) for col in cols}
-        s1 = ' '*(1+ pre + len(separator))
-        s2 = ''.join(['{0:>{1}}'.format(str(c),colw[c]) for c in cols])
-        s3 = ' '*(pre+len(separator)) + '-'*(sum(list(colw.values())) + 1)
-        s4 = ''.join(['{0:>{1}} {2}'.format(str(r), pre,separator)+''.join(['{0:>{1}.{2}G}'.format(M[r,c],colw[c],numdec) if isinstance(M[r,c], int) or isinstance(M[r,c], float) else '{0:>{1}}'.format(M[r,c], colw[c]) for c in cols])+'\n' for r in rows])
-        return '\n' + s1 + s2 + '\n' + s3 + '\n' + s4
+    def __str__(self):
+        return "Mat("+ str(self.D) + ", " + str(self.f) + ")"
